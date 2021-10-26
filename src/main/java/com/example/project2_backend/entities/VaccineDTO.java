@@ -1,24 +1,23 @@
 package com.example.project2_backend.entities;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
 import java.util.List;
 
 @Data
 @Builder
-@Entity
 @NoArgsConstructor
 @AllArgsConstructor
-public class Vaccine {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @EqualsAndHashCode.Exclude
+public class VaccineDTO {
+
     Long id;
     String name;
     String detail;
     String Country;
 
-    @OneToMany(mappedBy = "vaccine")
     List<patient> patientList;
 }
