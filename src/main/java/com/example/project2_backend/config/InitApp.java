@@ -7,9 +7,11 @@ import com.example.project2_backend.repository.VaccineRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.ApplicationListener;
+import org.springframework.stereotype.Component;
 
 import javax.transaction.Transactional;
 
+@Component
 public class InitApp implements ApplicationListener<ApplicationReadyEvent> {
 
     @Autowired
