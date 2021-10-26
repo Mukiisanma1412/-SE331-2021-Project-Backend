@@ -10,6 +10,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
+import util.LabMapper;
 
 public class PatientController {
     @Autowired
@@ -28,7 +29,7 @@ public class PatientController {
         }
         HttpHeaders responseHeader = new HttpHeaders();
         responseHeader.set("x-total-count", String.valueOf(pageOutput.getTotalElements()));
-        return new ResponseEntity<>(LabMapper.INSTANCE.getEventDto(pageOutput.getContent()), responseHeader, HttpStatus.OK);
+        return new ResponseEntity<>(LabMapper.INSTANCE.getPatientDao(pageOutput.getContent()), responseHeader, HttpStatus.OK);
 
     }
 
@@ -37,7 +38,7 @@ public class PatientController {
 
         patient output = patientService.getPatient(id);
         if (output != null) {
-            return ResponseEntity.ok(LabMapper.INSTANCE.getEventDto(output));
+            return ResponseEntity.ok(LabMapper.INSTANCE.getPatientDao(output));
         } else {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "The given id is not found");
         }
@@ -46,7 +47,7 @@ public class PatientController {
     @PostMapping("/patients")
     public ResponseEntity<?> addEvent(@RequestBody patient event) {
         patient output = patientService.save(event);
-        return ResponseEntity.ok(LabMapper.INSTANCE.getEventDto(output));
+        return ResponseEntity.ok(LabMapper.INSTANCE.getPatientDao(output));
 
 
     }
