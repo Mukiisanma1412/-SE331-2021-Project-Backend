@@ -16,8 +16,8 @@ import java.util.stream.Collectors;
 public interface LabMapper {
     LabMapper INSTANCE = Mappers.getMapper(LabMapper.class);
 
-    patientDTO getEventDto(patient patient);
-    List<patientDTO> getEventDto(List<patient> patients);
+    patientDTO getPatientDTO(patient patient);
+    List<patientDTO> getPatientDTO(List<patient> patients);
 
     VaccineDTO getVaccineDTO(Vaccine Vaccine);
     List<VaccineDTO> getVaccineDTO(List<Vaccine> Vaccine);

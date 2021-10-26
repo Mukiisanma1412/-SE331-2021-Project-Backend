@@ -20,7 +20,7 @@ public class patient {
     String Surname;
     String hometown;
     int age;
-    Date when;
+    String when;
 
     @ManyToOne
     Vaccine vaccine;

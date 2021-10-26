@@ -18,7 +18,7 @@ public class patientDTO {
     String Surname;
     String hometown;
     int age;
-    Date when;
+    String when;
 
     @ManyToOne
     Vaccine vaccine;
