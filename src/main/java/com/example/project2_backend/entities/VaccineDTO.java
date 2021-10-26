@@ -18,6 +18,5 @@ public class VaccineDTO {
     String name;
     String detail;
     String Country;
-
-    List<patient> patientList;
+    List<VaccinePatientDTO> patientList;
 }

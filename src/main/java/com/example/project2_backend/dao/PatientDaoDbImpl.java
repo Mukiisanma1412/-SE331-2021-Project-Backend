@@ -31,8 +31,8 @@ public class PatientDaoDbImpl implements PatientDao {
     }
 
     @Override
-    public patient save(patient event) {
-        return patientRepository.save(event);
+    public patient save(patient patient) {
+        return patientRepository.save(patient);
     }
 
     @Override

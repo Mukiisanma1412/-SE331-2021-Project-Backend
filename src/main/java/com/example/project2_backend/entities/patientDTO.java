@@ -5,8 +5,6 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.ManyToOne;
-import java.util.Date;
 
 @Data
 @Builder
@@ -16,13 +14,9 @@ public class patientDTO {
     Long id;
     String name;
     String Surname;
-    String hometown;
     int age;
     String when;
-
-    @ManyToOne
-    Vaccine vaccine;
-
     int status;
     String img;
+    PatientVaccineDTO vaccine;
 }

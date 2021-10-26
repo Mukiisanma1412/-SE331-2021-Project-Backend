@@ -5,8 +5,6 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.ArrayList;
-import java.util.List;
 
 @Data
 @Builder
@@ -15,5 +13,4 @@ import java.util.List;
 public class PatientVaccineDTO {
     Long id;
     String name;
-    List<patientGetVaccine> patientGetVaccineList = new ArrayList<>();
 }

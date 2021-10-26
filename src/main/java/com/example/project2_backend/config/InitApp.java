@@ -21,21 +21,21 @@ public class InitApp implements ApplicationListener<ApplicationReadyEvent> {
 
     @Override
     @Transactional
-    public void onApplicationEvent(ApplicationReadyEvent event) {
+    public void onApplicationEvent(ApplicationReadyEvent applicationReadyEvent)  {
+
+        patient tempPatient;
+
 
         Vaccine v1,v2,v3;
         v1 = vaccineRepository.save(Vaccine.builder().name("Pfizer").Country("German").detail("Pfizer1").build());
         v2 = vaccineRepository.save(Vaccine.builder().name("Moderna").Country("USA").detail("Moderna").build());
         v3 = vaccineRepository.save(Vaccine.builder().name("JJ").Country("USA").detail("Johnson and Johnson").build());
 
-        patient temp;
+        tempPatient = patientRepository.save(patient.builder().name("name").surname("sur").hometown("Thai")
+                .img("u").when("thu").build());
 
-        temp = patientRepository.save(patient.builder().name("a1").Surname("surname").age(22).hometown("Thailand").status(1).when("12/02/2021").build());
-        temp.setVaccine(v1);
-        v1.getPatientList().add(temp);
+        tempPatient.setVaccine(v1);
+        v1.getPatientList().add(tempPatient);
 
-        temp = patientRepository.save(patient.builder().name("a2").Surname("surname2").age(23).hometown("Thailand").status(1).when("15/02/2021").build());
-        temp.setVaccine(v2);
-        v2.getPatientList().add(temp);
     }
 }

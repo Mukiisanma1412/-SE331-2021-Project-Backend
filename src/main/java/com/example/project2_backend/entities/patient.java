@@ -17,15 +17,15 @@ public class patient {
     @EqualsAndHashCode.Exclude
     Long id;
     String name;
-    String Surname;
+    String surname;
     String hometown;
-    int age;
     String when;
+    String img;
+
 
     @ManyToOne
     Vaccine vaccine;
 
-    int status;
-    String img;
+
 
 }
