@@ -37,5 +37,9 @@ public class InitApp implements ApplicationListener<ApplicationReadyEvent> {
         temp = patientRepository.save(patient.builder().name("a2").Surname("surname2").age(23).hometown("Thailand").status(1).when("15/02/2021").build());
         temp.setVaccine(v2);
         v2.getPatientList().add(temp);
+
+        temp = patientRepository.save(patient.builder().name("a3").Surname("surname3").age(24).hometown("Thailand").status(1).when("17/02/2021").build());
+        temp.setVaccine(v3);
+        v3.getPatientList().add(temp);
     }
 }
