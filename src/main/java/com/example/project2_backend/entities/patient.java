@@ -24,7 +24,6 @@ public class patient {
 
     @ManyToOne
     Vaccine vaccineList;
-
     int status;
     String img;
 
