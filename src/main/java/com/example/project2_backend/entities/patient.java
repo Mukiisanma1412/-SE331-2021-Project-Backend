@@ -23,7 +23,7 @@ public class patient {
     Date when;
 
     @ManyToOne
-    Vaccine vaccineList;
+    Vaccine vaccine;
 
     int status;
     String img;
