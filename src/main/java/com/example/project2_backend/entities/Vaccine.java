@@ -19,6 +19,6 @@ public class Vaccine {
     String detail;
     String Country;
 
-    @OneToMany
+    @OneToMany(mappedBy = "vaccine")
     List<patient> patientList;
 }
