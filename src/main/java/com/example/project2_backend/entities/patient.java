@@ -3,8 +3,6 @@ package com.example.project2_backend.entities;
 import lombok.*;
 
 import javax.persistence.*;
-import java.util.Date;
-import java.util.List;
 
 @Data
 @Builder
@@ -19,7 +17,7 @@ public class patient {
     String name;
     String surname;
     String hometown;
-    String when;
+    String vaccineDate;
     String img;
 
 

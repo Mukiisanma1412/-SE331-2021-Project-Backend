@@ -32,10 +32,9 @@ public class InitApp implements ApplicationListener<ApplicationReadyEvent> {
         v3 = vaccineRepository.save(Vaccine.builder().name("JJ").Country("USA").detail("Johnson and Johnson").build());
 
         tempPatient = patientRepository.save(patient.builder().name("name").surname("sur").hometown("Thai")
-                .img("u").when("thu").build());
+                .img("u").vaccineDate("thu").vaccine(v1).build());
 
-        tempPatient.setVaccine(v1);
-        v1.getPatientList().add(tempPatient);
+
 
     }
 }
