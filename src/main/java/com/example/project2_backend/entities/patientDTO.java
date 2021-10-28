@@ -15,7 +15,7 @@ public class patientDTO {
     String name;
     String Surname;
     int age;
-    String when;
+    String vaccineDate;
     int status;
     String img;
     PatientVaccineDTO vaccine;

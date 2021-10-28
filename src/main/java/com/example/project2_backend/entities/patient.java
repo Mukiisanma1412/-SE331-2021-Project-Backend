@@ -16,6 +16,7 @@ public class patient {
     Long id;
     String name;
     String surname;
+    int age;
     String hometown;
     String vaccineDate;
     String img;
@@ -23,6 +24,7 @@ public class patient {
 
     @ManyToOne
     Vaccine vaccine;
+    int status;
 
 
 
