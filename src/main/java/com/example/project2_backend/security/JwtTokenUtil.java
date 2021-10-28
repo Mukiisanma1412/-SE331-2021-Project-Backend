@@ -1,5 +1,6 @@
-package se331.lab.rest.security;
+package com.example.project2_backend.security;
 
+import com.example.project2_backend.security.entity.JwtUser;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -7,7 +8,6 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.mobile.device.Device;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
-import se331.lab.rest.security.entity.JwtUser;
 
 import java.io.Serializable;
 import java.util.Date;

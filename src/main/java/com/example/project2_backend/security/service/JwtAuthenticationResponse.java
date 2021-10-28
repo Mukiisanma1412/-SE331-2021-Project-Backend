@@ -1,4 +1,4 @@
-package se331.lab.rest.security.service;
+package com.example.project2_backend.security.service;
 
 import java.io.Serializable;
 

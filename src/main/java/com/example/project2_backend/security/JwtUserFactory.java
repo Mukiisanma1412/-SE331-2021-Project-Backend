@@ -1,10 +1,10 @@
-package se331.lab.rest.security;
+package com.example.project2_backend.security;
 
+import com.example.project2_backend.security.entity.JwtUser;
+import com.example.project2_backend.security.entity.User;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
-import se331.lab.rest.security.entity.Authority;
-import se331.lab.rest.security.entity.JwtUser;
-import se331.lab.rest.security.entity.User;
+import com.example.project2_backend.security.entity.Authority;
 
 import java.util.List;
 import java.util.stream.Collectors;

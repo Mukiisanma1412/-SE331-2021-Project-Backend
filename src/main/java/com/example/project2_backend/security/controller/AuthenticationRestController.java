@@ -1,6 +1,7 @@
-package se331.lab.rest.security.controller;
+package com.example.project2_backend.security.controller;
 
 
+import com.example.project2_backend.security.entity.JwtUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
@@ -13,8 +14,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.web.bind.annotation.*;
-import se331.lab.rest.security.JwtTokenUtil;
-import se331.lab.rest.security.entity.JwtUser;
+import com.example.project2_backend.security.JwtTokenUtil;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;

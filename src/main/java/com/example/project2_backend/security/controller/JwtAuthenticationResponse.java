@@ -1,4 +1,4 @@
-package se331.lab.rest.security.controller;
+package com.example.project2_backend.security.controller;
 
 import java.io.Serializable;
 

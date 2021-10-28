@@ -1,13 +1,13 @@
-package se331.lab.rest.security.service;
+package com.example.project2_backend.security.service;
 
+import com.example.project2_backend.security.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
-import se331.lab.rest.security.JwtUserFactory;
-import se331.lab.rest.security.entity.User;
-import se331.lab.rest.security.repository.UserRepository;
+import com.example.project2_backend.security.JwtUserFactory;
+import com.example.project2_backend.security.repository.UserRepository;
 
 /**
  * Created by stephan on 20.03.16.

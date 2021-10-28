@@ -1,7 +1,7 @@
-package se331.lab.rest.security.repository;
+package com.example.project2_backend.security.repository;
 
+import com.example.project2_backend.security.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
-import se331.lab.rest.security.entity.User;
 
 public interface UserRepository extends JpaRepository<User, Long> {
     User findByUsername(String username);

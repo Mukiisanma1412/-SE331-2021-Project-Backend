@@ -1,4 +1,4 @@
-package se331.lab.rest.security.controller;
+package com.example.project2_backend.security.controller;
 
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.AuthenticationEntryPoint;
