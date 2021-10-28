@@ -1,4 +1,4 @@
-package com.example.project2_backend.dao;
+package com.example.project2_backend.security.dao;
 
 import com.example.project2_backend.security.entity.User;
 

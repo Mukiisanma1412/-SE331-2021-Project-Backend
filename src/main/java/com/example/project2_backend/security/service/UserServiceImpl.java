@@ -1,6 +1,6 @@
-package com.example.project2_backend.service;
+package com.example.project2_backend.security.service;
 
-import com.example.project2_backend.dao.UserDao;
+import com.example.project2_backend.security.dao.UserDao;
 import com.example.project2_backend.security.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

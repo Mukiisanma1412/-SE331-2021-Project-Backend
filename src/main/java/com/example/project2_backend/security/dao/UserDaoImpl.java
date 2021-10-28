@@ -1,7 +1,7 @@
-package com.example.project2_backend.dao;
+package com.example.project2_backend.security.dao;
 
-import com.example.project2_backend.repository.UserRepository;
 import com.example.project2_backend.security.entity.User;
+import com.example.project2_backend.security.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 

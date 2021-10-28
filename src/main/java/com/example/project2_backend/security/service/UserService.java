@@ -1,4 +1,4 @@
-package com.example.project2_backend.service;
+package com.example.project2_backend.security.service;
 
 import com.example.project2_backend.security.entity.User;
 

@@ -1,4 +1,4 @@
-package com.example.project2_backend.entities;
+package com.example.project2_backend.security.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
