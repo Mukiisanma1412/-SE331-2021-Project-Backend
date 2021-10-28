@@ -44,6 +44,7 @@ public class User {
     @NotNull
     private String lastname;
 
+
     @Column(name = "EMAIL", length = 50)
     @NotNull
     private String email;
