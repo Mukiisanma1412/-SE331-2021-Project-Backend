@@ -39,7 +39,7 @@ public class InitApp implements ApplicationListener<ApplicationReadyEvent> {
     @Transactional
     public void onApplicationEvent(ApplicationReadyEvent applicationReadyEvent)  {
 
-        patient p1,p2,p3;
+        patient p1,p2,p3,p4,p5;
 
 
         Vaccine v1,v2,v3,v4;
@@ -48,13 +48,16 @@ public class InitApp implements ApplicationListener<ApplicationReadyEvent> {
         v3 = vaccineRepository.save(Vaccine.builder().name("JJ").Country("USA").detail("Johnson and Johnson").build());
         v4 = vaccineRepository.save(Vaccine.builder().name("Sinofarm").Country("China").detail("Sinofarm cop.").build());
 
-        p1 = patientRepository.save(patient.builder().name("MK").surname("Sukii").hometown("Thai")
+        p1 = patientRepository.save(patient.builder().name("Supasara").surname("Sukii").hometown("Thai")
                 .img("u").vaccineDate("thu").vaccine(v1).status(1).age(23).build());
-        p2 = patientRepository.save(patient.builder().name("MK").surname("Sukii").hometown("Thai")
-                .img("u").vaccineDate("thu").vaccine(v1).status(1).age(24).build());
-        p3 = patientRepository.save(patient.builder().name("MK").surname("Sukii").hometown("Thai")
+        p2 = patientRepository.save(patient.builder().name("Takahashi").surname("Run").hometown("Japan")
+                .img("u").vaccineDate("thu").vaccine(v1).status(1).age(21).build());
+        p3 = patientRepository.save(patient.builder().name("Robison").surname("kodsod").hometown("Thai")
                 .img("u").vaccineDate("thu").vaccine(v2).status(2).age(25).build());
-
+        p4 = patientRepository.save(patient.builder().name("Thitinat").surname("IM").hometown("Japan")
+                .img("u").vaccineDate("thu").vaccine(v2).status(2).age(20).build());
+        p5 = patientRepository.save(patient.builder().name("Ishikawa").surname("Yuki").hometown("Japan")
+                .img("u").vaccineDate("thu").vaccine(v2).status(1).age(20).build());
         addUser();
     }
 
