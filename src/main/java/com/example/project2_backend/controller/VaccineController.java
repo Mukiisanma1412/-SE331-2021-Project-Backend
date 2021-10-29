@@ -1,8 +1,6 @@
 package com.example.project2_backend.controller;
 
 import com.example.project2_backend.entities.Vaccine;
-import com.example.project2_backend.entities.patient;
-import com.example.project2_backend.service.PatientService;
 import com.example.project2_backend.service.VaccineService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -15,7 +13,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.server.ResponseStatusException;
-import util.LabMapper;
+import com.example.project2_backend.util.LabMapper;
 
 @Controller
 public class VaccineController {

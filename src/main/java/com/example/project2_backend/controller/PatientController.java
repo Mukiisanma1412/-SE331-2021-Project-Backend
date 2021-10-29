@@ -11,7 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
-import util.LabMapper;
+import com.example.project2_backend.util.LabMapper;
 
 @Controller
 public class PatientController {

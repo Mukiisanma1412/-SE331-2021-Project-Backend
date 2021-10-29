@@ -11,9 +11,10 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class patientDTO {
+
     Long id;
     String name;
-    String Surname;
+    String surname;
     int age;
     String vaccineDate;
     int status;

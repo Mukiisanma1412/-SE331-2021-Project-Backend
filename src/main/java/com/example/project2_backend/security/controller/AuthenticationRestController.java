@@ -2,6 +2,8 @@ package com.example.project2_backend.security.controller;
 
 
 import com.example.project2_backend.security.entity.JwtUser;
+import com.example.project2_backend.security.entity.User;
+import com.example.project2_backend.security.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
@@ -36,6 +38,9 @@ public class AuthenticationRestController {
     @Autowired
     private UserDetailsService userDetailsService;
 
+    @Autowired
+    UserRepository userRepository;
+
 
     @PostMapping("${jwt.route.authentication.path}")
     public ResponseEntity<?> createAuthenticationToken(@RequestBody JwtAuthenticationRequest authenticationRequest, Device device) throws AuthenticationException {
@@ -54,6 +59,10 @@ public class AuthenticationRestController {
         final String token = jwtTokenUtil.generateToken(userDetails, device);
         Map result = new HashMap();
         result.put("token", token);
+        User user = userRepository.findById(((JwtUser) userDetails).getId()).orElse(null);
+        result.put("user", user.getId());
+        result.put("name", user.getFirstname()+user.getLastname());
+
         return ResponseEntity.ok(result);
     }
 
