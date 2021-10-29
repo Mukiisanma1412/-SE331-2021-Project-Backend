@@ -1,7 +1,6 @@
 package com.example.project2_backend.security.controller;
 
 
-import com.example.project2_backend.entities.patient;
 import com.example.project2_backend.security.entity.User;
 import com.example.project2_backend.security.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.server.ResponseStatusException;
-import util.LabMapper;
+import com.example.project2_backend.util.LabMapper;
 
 @Controller
 public class UserController {
