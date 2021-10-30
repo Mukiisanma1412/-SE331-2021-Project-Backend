@@ -5,16 +5,15 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class UserDTO {
-
-    private String firstname;
-    private String lastname;
-    String username;
+public class UserAuthDTO {
     Long id;
-    String password;
-
+    String firstname;
+    String lastname;
+    List<String> authorities;
 }
